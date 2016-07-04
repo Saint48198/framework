@@ -13,5 +13,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "ProQuest-UIKit": "pqdev/ProQuest-UIKit#^1.3.0"
+  }
 }

@@ -4,6 +4,7 @@ import { ExampleComponent } from './components/examples/examples.component';
 import { FrameworkComponentsComponent } from './components/framework-components/framework-components.component';
 import { GuidelinesComponent } from './components/guidelines/guidelines.component';
 import { UIKitComponent } from './components/ui-kit/ui-kit.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 const routes: RouterConfig = [
     {
@@ -27,9 +28,12 @@ const routes: RouterConfig = [
         component: UIKitComponent
     },
     {
+        path: 'contact',
+        component: ContactComponent
+    },
+    {
         path: '',
-        redirectTo: '/explore',
-        pathMatch: 'full'
+        redirectTo: '/explore'
     },
 ];
 

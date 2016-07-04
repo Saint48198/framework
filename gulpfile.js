@@ -51,9 +51,27 @@ gulp.task('copy:assets', () => {
 /**
  * Copy all required libraries into build directory.
  */
-gulp.task('copy:libs', () => {
+gulp.task('copy:node_modules', () => {
 	return gulp.src([
-		'node_modules/**/*.js',
+		'node_modules/@angular/**/*.js',
+		'node_modules/@angular/*.js.map',
+		'node_modules/core-js/**/*.js',
+		'node_modules/core-js/*.js.map',
+		'node_modules/zone.js/**/*.js',
+		'node_modules/zone.js/*.js.map',
+		'node_modules/reflect-metadata/**/*.js',
+		'node_modules/reflect-metadata/*.js.map',
+		'node_modules/systemjs/**/*.js',
+		'node_modules/systemjs/*.js.map',
+		'node_modules/rxjs/**/*.js',
+		'node_modules/rxjs/*.js.map',
+	], { base: 'node_modules'})
+		.pipe(gulp.dest('dist/lib'))
+});
+
+gulp.task('copy:bower_components', () => {
+	return gulp.src([
+		'bower_components/**/*',
 	])
 		.pipe(gulp.dest('dist/lib'))
 });
@@ -97,7 +115,8 @@ gulp.task('build', (callback) => {
 		'tslint',
 		'compile',
 		'copy:assets',
-		'copy:libs',
+		'copy:node_modules',
+		'copy:bower_components',
 		'sass',
 		callback);
 });

@@ -5,3 +5,4 @@ src/app/**/*.js
 typings/
 *.log
 .idea/
+/bower_components/
