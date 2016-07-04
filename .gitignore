@@ -1,0 +1,7 @@
+dist/
+node_modules/
+src/app/**/*.js
+*.map
+typings/
+*.log
+.idea/
