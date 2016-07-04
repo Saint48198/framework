@@ -44,7 +44,7 @@ gulp.task('compile', () => {
  * Copy all resources that are not TypeScript files into build directory.
  */
 gulp.task('copy:assets', () => {
-	return gulp.src(['src/**/*', 'src/index.html', 'src/systemjs.config.js', '!**/*.ts', '!src/sass'])
+	return gulp.src(['src/**/*', 'src/index.html', 'src/systemjs.config.js', '!**/*.ts', '!**/*.scss'])
 		.pipe(gulp.dest('dist'));
 });
 
